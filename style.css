@@ -1,0 +1,107 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color:beige;
+}
+
+h1{
+    color:rgb(26, 47, 47);
+}
+
+/* Mensaje de carga de la API. */
+#estado {
+    color: #555555;
+}
+
+/* Aspecto de la tabla de productos. */
+table{
+    width: 100%;
+    max-width: 850px;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+th{
+    background-color: #e5e5e5;
+}
+
+tr:hover{
+    background-color: #f0f0f0;
+}
+
+/* Estilos de los botones para aumentar y disminuir unidades. */
+button{
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #cccccc;
+    background-color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #dddddd;
+}
+
+/* El botón de restar se desactiva cuando la cantidad es cero. */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+td span{
+    margin: 0 8px;
+}
+
+/* Distribución principal: productos a la izquierda y resumen a la derecha. */
+.contenedor-tienda {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    max-width: 1200px;
+    align-items: start;
+}
+
+.zona-productos {
+    min-width: 0;
+    overflow-x: auto;
+}
+
+.zona-productos table {
+    width: 100%;
+    max-width: none;
+}
+
+/* Aspecto del resumen de compra. */
+.resumen {
+    max-width: 810px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e5e5e5;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.resumen h2 {
+    margin-top: 0;
+}
+
+.resumen p {
+    margin-bottom: 10px;
+}
+
+#total-carrito {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+@media (max-width: 800px) {
+    .contenedor-tienda {
+        grid-template-columns: 1fr;
+    }
+}

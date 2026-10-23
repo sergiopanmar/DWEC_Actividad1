@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AgoodShop</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Con defer, JavaScript se ejecuta cuando el HTML ya está preparado. -->
+        <script src="script.js" defer></script>
+    </head>
+    
+<body>
+
+    <h1>AgoodShop</h1>
+    <p>Bienvenido a nuestra tienda online.</p>
+    <!-- El mensaje informa de si los productos se han obtenido de la API. -->
+    <p id="estado" role="status">Cargando productos...</p>
+
+    <!-- Dividimos la tienda en dos zonas: productos y resumen de compra. -->
+    <div class="contenedor-tienda">
+
+        <div class="zona-productos">
+
+            <h2>Productos disponibles</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Unidades</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+
+                <!-- JavaScript creará aquí una fila por cada producto de la API. -->
+                <tbody id="lista-productos">
+                </tbody>
+            </table>
+
+        </div>
+
+        <!-- Esta sección se actualiza cada vez que cambiamos una cantidad. -->
+        <section class="resumen">
+
+            <h2>Resumen del carrito</h2>
+
+            <!-- Aquí aparecerán solamente los productos con unidades seleccionadas. -->
+            <div id="productos-seleccionados"></div>
+
+            <hr>
+
+            <p>
+                <strong>TOTAL:</strong>
+                <span id="total-carrito">0.00 €</span>
+            </p>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>
